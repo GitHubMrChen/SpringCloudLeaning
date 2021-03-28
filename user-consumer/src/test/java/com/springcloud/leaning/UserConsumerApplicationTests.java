@@ -1,10 +1,10 @@
-package com.springcloud.leaning.eurakaserver;
+package com.springcloud.leaning;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class EurakaServerApplicationTests {
+class UserConsumerApplicationTests {
 
     @Test
     void contextLoads() {

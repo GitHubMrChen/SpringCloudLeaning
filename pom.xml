@@ -21,7 +21,8 @@
     </parent>
 
     <modules>
-        <module>euraka-server</module>
+        <module>user-consumer</module>
+        <module>user-service</module>
     </modules>
 
     <properties>
