@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.springcloud.leaning</groupId>
-    <artifactId>user-consumer</artifactId>
+    <artifactId>eureka-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -16,19 +16,15 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <name>user-consumer</name>
-    <description>user-consumer project for Spring Boot</description>
+    <name>eureka-server</name>
+    <description>eureka-server project for Spring Boot</description>
 
     <dependencies>
-        <!-- Eureka客户端 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>

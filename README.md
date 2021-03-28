@@ -10,4 +10,16 @@ A Learning Project For The SpringCloud
 
 传统项目的接口调用
 
+### sc-hoxton-chapter2
 
+Eureka服务注册中心使用
+
+- ```
+  @EnableEurekaServer // 声明应用为eureka服务
+  ```
+
+- ```
+  @EnableDiscoveryClient // 开启Eureka客户端发现功能
+  ```
+
+  
