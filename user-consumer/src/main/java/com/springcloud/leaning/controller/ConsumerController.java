@@ -1,6 +1,5 @@
 package com.springcloud.leaning.controller;
 
-import com.netflix.appinfo.InstanceInfo;
 import com.springcloud.leaning.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
@@ -30,6 +29,7 @@ public class ConsumerController {
         List<ServiceInstance> serviceInstanceList = discoveryClient.getInstances("user-service");
         ServiceInstance serviceInstance = serviceInstanceList.get(0);
         url = "http://" + serviceInstance.getHost() + ":" + serviceInstance.getPort() + "/user/" + id;
+        System.out.println(url);
         return restTemplate.getForObject(url, User.class);
     }
 

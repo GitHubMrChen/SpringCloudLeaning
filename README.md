@@ -22,4 +22,6 @@ Eureka服务注册中心使用
   @EnableDiscoveryClient // 开启Eureka客户端发现功能
   ```
 
-  
+服务发现动态转发
+
+高可用的Eureka服务
