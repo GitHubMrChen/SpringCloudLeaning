@@ -34,5 +34,20 @@ ribbon实现负载均衡
 @LoadBalanced // 在RestTemplate的配置方法上添加 @LoadBalanced 注解，开启负载均衡
 ```
 
+### sc-hoxton-chapter4
 
+熔断器Hystrix
+
+- ```
+  @EnableCircuitBreaker // 开启断路器
+  ```
+
+- ```
+  @SpringCloudApplication // 当我们的启动类注解越来越多，可以使用该注册替代
+  // SpringCloudApplication注解类
+  @SpringBootApplication
+  @EnableDiscoveryClient
+  @EnableCircuitBreaker
+  public @interface SpringCloudApplication
+  ```
 

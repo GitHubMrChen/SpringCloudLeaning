@@ -1,5 +1,7 @@
 package com.springcloud.leaning.controller;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.ribbon.proxy.annotation.Hystrix;
 import com.springcloud.leaning.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
@@ -36,6 +38,18 @@ public class ConsumerController {
     public User balancedQueryById(@PathVariable Long id) {
         String url = "http://user-service/user/" + id;
         return restTemplate.getForObject(url, User.class);
+    }
+
+    @GetMapping("/hystrix/{id}")
+    @HystrixCommand(fallbackMethod = "queryByIdFallback")
+    public User hystrixQueryById(@PathVariable Long id) {
+        String url = "http://user-service/user/" + id;
+        return restTemplate.getForObject(url, User.class);
+    }
+
+    public User queryByIdFallback(Long id) {
+        System.out.printf("查询用户信息失败。id：%s", id);
+        return new User();
     }
 
 }
