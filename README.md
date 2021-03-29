@@ -25,3 +25,14 @@ Eureka服务注册中心使用
 服务发现动态转发
 
 高可用的Eureka服务
+
+### sc-hoxton-chapter3
+
+ribbon实现负载均衡
+
+```
+@LoadBalanced // 在RestTemplate的配置方法上添加 @LoadBalanced 注解，开启负载均衡
+```
+
+
+

@@ -3,6 +3,7 @@ package com.springcloud.leaning.controller;
 import com.springcloud.leaning.pojo.User;
 import com.springcloud.leaning.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,9 +15,12 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+    @Value("${server.port}")
+    private String port;
 
     @GetMapping("/{id}")
     public User queryById(@PathVariable Long id) {
+        System.out.println(port);
         return userService.queryById(id);
     }
 

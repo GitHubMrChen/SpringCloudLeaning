@@ -24,12 +24,17 @@ public class ConsumerController {
     @GetMapping("/{id}")
     public User queryById(@PathVariable Long id) {
         String url = "http://localhost:9091/user/" + id;
-
         // 获取eureka中注册的user-service实例列表
         List<ServiceInstance> serviceInstanceList = discoveryClient.getInstances("user-service");
         ServiceInstance serviceInstance = serviceInstanceList.get(0);
         url = "http://" + serviceInstance.getHost() + ":" + serviceInstance.getPort() + "/user/" + id;
         System.out.println(url);
+        return restTemplate.getForObject(url, User.class);
+    }
+
+    @GetMapping("/balanced/{id}")
+    public User balancedQueryById(@PathVariable Long id) {
+        String url = "http://user-service/user/" + id;
         return restTemplate.getForObject(url, User.class);
     }
 
