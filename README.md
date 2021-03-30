@@ -5,6 +5,12 @@ A Learning Project For The SpringCloud
  - 搭建Euraka注册中心
  - 使用Robbin负载均衡
  - 使用Hystrix熔断
+ - 使用Feign进行远程调用
+ - 搭建Spring Cloud Gateway网关服务
+ - 配置Spring Cloud Gateway路由过滤器
+ - 编写Spring Cloud Gateway全局过滤器
+ - 搭建Spring Cloud Config配置中心服务
+ - 使用Spring Cloud Bus实时更新配置
 
 ### sc-hoxton-chapter1
 
@@ -50,4 +56,16 @@ ribbon实现负载均衡
   @EnableCircuitBreaker
   public @interface SpringCloudApplication
   ```
+
+### sc-hoxton-chapter5
+
+使用Feign进行远程调用
+
+- ```
+  @EnableFeignClients // 开启feign功能
+  ```
+
+  Feign默认集成了ribbon
+
+  Feign默认集成了hystix
 
