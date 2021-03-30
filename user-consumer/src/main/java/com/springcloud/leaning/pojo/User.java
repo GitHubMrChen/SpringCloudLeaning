@@ -1,5 +1,7 @@
 package com.springcloud.leaning.pojo;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.util.Date;
 
 public class User {
@@ -7,21 +9,21 @@ public class User {
     private Long id;
 
     private String userName; // 用户名
-
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String password; // 密码
-
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String name; // 姓名
-
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private Integer age; // 年龄
-
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private Integer sex; // 性别 1女性 2男性
-
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private Date birthday; // 出生日期
-
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private Date created; // 创建时间
-
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private Date updated; // 更新时间
-
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String note; // 备注
 
     public Long getId() {
