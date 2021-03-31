@@ -69,3 +69,16 @@ ribbon实现负载均衡
 
   Feign默认集成了hystix
 
+### sc-hoxton-chapter6
+
+spring-gateway
+
+路由负载均衡
+
+路径过滤的添加和去除
+
+spring-cloud-config
+
+```
+@EnableConfigServer // 激活配置服务
+```
