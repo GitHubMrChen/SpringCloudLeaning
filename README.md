@@ -82,3 +82,11 @@ spring-cloud-config
 ```
 @EnableConfigServer // 激活配置服务
 ```
+
+### sc-hoxton-chapter7
+
+- ```
+  @RefreshScope // 开启spring-cloud-bus消息总线刷新配置服务
+  ```
+
+spring-cloud-bus总线刷新服务配置应用
